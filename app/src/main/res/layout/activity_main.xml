@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context="com.example.android.footbalscorecounter.MainActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/pitch">
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team A"
+            android:id="@+id/team_a_text"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="70sp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/score_Team_A"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reset game"
+            android:onClick="reset"
+            android:id="@+id/reset_button"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/loadimagebutton"
+            android:onClick="addOneB"
+            android:id="@+id/goalA"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/team_a_text"
+            android:layout_alignStart="@+id/team_a_text" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <EditText
+            android:id="@+id/team_b_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Team B"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/score_Team_B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="0"
+            android:textSize="70sp" />
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Start" />
+
+        <Button
+            android:id="@+id/pauseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/startButton"
+            android:text="Pause" />
+
+        <TextView
+            android:id="@+id/timerValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/startButton"
+            android:layout_marginLeft="30dp"
+            android:text="@string/timerVal"
+            android:textSize="30sp" />
+
+        <ImageButton
+            android:id="@+id/goalB"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/loadimagebutton"
+            android:onClick="addOneA"
+            android:layout_centerVertical="true"
+            android:layout_alignRight="@+id/team_b_text"
+            android:layout_alignEnd="@+id/team_b_text" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
